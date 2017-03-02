@@ -5,17 +5,17 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
 
-  botRegex = /(\s|^)(B|b)ot(\s|$)/;  botRegexTi = /(.*)(T|t)itan(.*)/;botRegexBi = /(.*)(B|b)itch(.*)/
-  botRegexBk = /(.*)(B|b)oss kill(.*)/;botRegexAr = /(.*)(A|a)rena cutoff(.*)/;botRegexPr = /(.*)(P|p)restige link(.*)/;
-  botRegexFu = /(.*)(F|f)uck (Y|y)ou(.*)/;botRegexHg = /Graves/;botRegexFf = /(.*)(B|b)(R|r)(A|a|U|u)(H|h)(.*)/;
-  botRegexDo = /\/(D|d)onations/;botRegex6 = /\/(M|m)ap6$/;botRegex61 = /\/(M|m)ap6[.]1$/;botRegex62 = /\/(M|m)ap6[.]2$/;
-  botRegex63 = /\/(M|m)ap6[.]3$/;botRegexLe = /\/(L|l)egend$/;botRegexSc = /(\s|^)(S|s)crew (Y|y)ou(\s|$)/;
-
+  botRegex = /(\s|^)(B|b)ot(\s|$)/;  botRegexFi = /\/5$/;botRegexBa = /\/(B|b)asic(.*)/
+  botRegexAr = /\/(A|a)rena(.*)/;botRegexPr = /\/(P|p)restige(.*)/;
+  botRegex6 = /\/(M|m)ap6$/;botRegex61 = /\/(M|m)ap6[.]1$/;botRegex62 = /\/(M|m)ap6[.]2$/;botRegex63 = /\/(M|m)ap6[.]3$/;
+  botRegexDo = /\/(D|d)onations/;botRegexLe = /\/(L|l)egend$/;botRegexLi = /\/(L|l)ist$/;
+  botRegexHg = /Graves/;botRegexFf = /(.*)(B|b)(R|r)(A|a|U|u)(H|h)(.*)/;botRegexBk = /(.*)(B|b)oss kill(.*)/;
+  botRegexBi = /(.*)(B|b)itch(.*)/;
+  
   var phraseArray = ["#?",
                     "#wtf",
                     "#saymyname",
                     "#24msgs",
-                    "#omv",
                     "#legend",
                     "#iamgroot",
                     "#telomere",
@@ -41,22 +41,16 @@ function respond() {
     postMessage(phrase);
     this.res.end();
   }
-  else if(request.text && botRegexTi.test(request.text)) {
+  else if(request.text && botRegexLi.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("#hebackyet?");
+    postMessage("- /test "\n"- /basic");
     this.res.end();
   } 
-  
   else if(request.text && botRegexBi.test(request.text)) {
     this.res.writeHead(200);
     postMessage("#thatbih");
     this.res.end();
   } 
-  else if(request.text && botRegexBk.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("#bosskillah");
-    this.res.end();
-  }  
   else if(request.text && botRegexAr.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://docs.google.com/spreadsheets/d/1sJtSVnjhhRNxpiuMR5uXrsTlrsXMjp9TNO7JHDXhtsk/htmlview?pli=1");
@@ -65,11 +59,6 @@ function respond() {
   else if(request.text && botRegexPr.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://docs.google.com/spreadsheets/d/13oEg8HzEB11-il7o4mBDUpPx-s2hnPvRa1PSMgpxyYE/edit?usp=sharing");
-    this.res.end();
-  }  
-  else if(request.text && botRegexFu.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("#Me?? Fuq you!");
     this.res.end();
   }
   else if(request.text && botRegexHg.test(request.text)) {
@@ -114,9 +103,19 @@ function respond() {
     postMessage("http://community.kabam.com/forums/showthread.php?650203-Hall-of-Legends&p=3307845#post3307845");
     this.res.end();
   }
-  else if(request.text && botRegexSc.test(request.text)) {
+  else if(request.text && botRegexFi.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://s-media-cache-ak0.pinimg.com/564x/cb/91/72/cb9172eba64a409ebc3422a3c22ba6e7.jpg");
+    postMessage("https://scontent-lax3-2.xx.fbcdn.net/v/t31.0-8/16113439_1441949889156689_6771627865109045810_o.jpg?oh=5b3c467aa14bc53b0d1ed19e3ac26aef&oe=596F2DF0");
+    this.res.end();
+  }
+  else if(request.text && botRegexBa.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/15940423_1430227310328947_8798655967278199186_n.jpg?oh=2e45fab35fe0422dc32619b4b25a014c&oe=593181EF");
+    this.res.end();
+  }
+  else if(request.text && botRegexBk.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("#bosskillah");
     this.res.end();
   }
   else {
@@ -168,6 +167,5 @@ function chooseRandom(myArray) {
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
-
 
 exports.respond = respond;
