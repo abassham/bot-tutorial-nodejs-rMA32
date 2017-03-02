@@ -43,7 +43,7 @@ function respond() {
   }
   else if(request.text && botRegexLi.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("- /test "\\n"- /basic");
+    postMessage("- /test "\r\n"- /basic");
     this.res.end();
   } 
   else if(request.text && botRegexBi.test(request.text)) {
