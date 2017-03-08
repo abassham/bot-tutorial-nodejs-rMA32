@@ -63,7 +63,7 @@ function respond() {
   }
   else if(request.text && botRegexCa.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://docs.google.com/spreadsheets/d/1wIp0QBSAZdQRFYIVm70Un7NzWRzuHDaa1p5UKTUkHJ0/edit#gid=0");
+    postMessage("https://docs.google.com/spreadsheets/d/1yeQ7NbFMmJKWQKH8fLV7tTDdygAB1ECl5ag4LIXnxgM/copy");
     this.res.end();
   }
   else if(request.text && botRegexHg.test(request.text)) {
