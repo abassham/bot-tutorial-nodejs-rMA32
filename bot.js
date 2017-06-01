@@ -10,7 +10,7 @@ function respond() {
   botRegex6 = /\/(M|m)ap6$/;botRegex61 = /\/(M|m)ap6[.]1$/;botRegex62 = /\/(M|m)ap6[.]2$/;botRegex63 = /\/(M|m)ap6[.]3$/;
   botRegexDo = /\/(D|d)onations/;botRegexLe = /\/(L|l)egend$/;botRegexLi = /\/(L|l)ist$/;
   botRegexHg = /Graves/;botRegexFf = /(.*)(B|b)(R|r)(A|a|U|u)(H|h)(.*)/;botRegexBk = /(.*)(B|b)oss kill(.*)/;
-  botRegexBi = /(.*)(B|b)itch(.*)/;
+  botRegexBi = /(.*)(B|b)itch(.*)/; botRegexSt = /(.*)(S|s)treak(.*)/; botRegexCo = /(.*)(C|c)ost(.*)/;
   
   var phraseArray = ["#?",
                     "#wtf",
@@ -39,6 +39,11 @@ function respond() {
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(phrase);
+    this.res.end();
+  }
+  else if(request.text && botRegexSt.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://drive.google.com/open?id=0B20CcFiEk3ngUm90b0pIN2xhQ1U");
     this.res.end();
   }
   else if(request.text && botRegexLi.test(request.text)) {
@@ -71,6 +76,11 @@ function respond() {
     postMessage("https://pbs.twimg.com/media/Cu2PYhIVUAENEZj.jpg");
     this.res.end();
   }
+  else if(request.text && botRegexCo.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://drive.google.com/open?id=0B20CcFiEk3ngX1E5bnFWYmlLM1k");
+    this.res.end();
+  }
   else if(request.text && botRegexHg.test(request.text)) {
     this.res.writeHead(200);
     if(Math.random() >= 0.9)
@@ -84,7 +94,7 @@ function respond() {
   } 
   else if(request.text && botRegexDo.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("GO: 170k\nBC: 46k\nLO: 15k");
+    postMessage("GO: 117k\nBC: 26k\nLO: 11k");
     this.res.end();
   }
   else if(request.text && botRegex6.test(request.text)) {
@@ -115,7 +125,7 @@ function respond() {
   }
   else if(request.text && botRegexFi.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://scontent-lax3-2.xx.fbcdn.net/v/t31.0-8/16113439_1441949889156689_6771627865109045810_o.jpg?oh=5b3c467aa14bc53b0d1ed19e3ac26aef&oe=596F2DF0");
+    postMessage("https://drive.google.com/open?id=0B20CcFiEk3ngQlBma2ZWTklhYTQ");
     this.res.end();
   }
   else if(request.text && botRegexBa.test(request.text)) {
