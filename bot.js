@@ -15,11 +15,9 @@ function respond() {
   var phraseArray = ["#?",
                     "#wtf",
                     "#saymyname",
-                    "#24msgs",
                     "#legend",
                     "#iamgroot",
-                    "#telomere",
-                     "http://pix.iemoji.com/images/emoji/apple/ios-9/256/lion-face.png",
+                    "http://pix.iemoji.com/images/emoji/apple/ios-9/256/lion-face.png",
                     "#here"];
   var phrase = chooseRandom(phraseArray);
   var phraseArray2 = ["#2fast",
@@ -130,7 +128,7 @@ function respond() {
   }
   else if(request.text && botRegexBa.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/15940423_1430227310328947_8798655967278199186_n.jpg?oh=2e45fab35fe0422dc32619b4b25a014c&oe=593181EF");
+    postMessage("https://drive.google.com/open?id=0B20CcFiEk3ngWXRDTlU2RHRjenM");
     this.res.end();
   }
   else if(request.text && botRegexBk.test(request.text)) {
