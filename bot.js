@@ -10,7 +10,7 @@ function respond() {
   botRegex6 = /\/(M|m)ap6$/;botRegex61 = /\/(M|m)ap6[.]1$/;botRegex62 = /\/(M|m)ap6[.]2$/;botRegex63 = /\/(M|m)ap6[.]3$/;
   botRegexDo = /\/(D|d)onations/;botRegexLe = /\/(L|l)egend$/;botRegexLi = /\/(L|l)ist$/;
   botRegexHg = /Graves/;botRegexFf = /(.*)(B|b)(R|r)(A|a|U|u)(H|h)(.*)/;botRegexBk = /(.*)(B|b)oss kill(.*)/;
-  botRegexBi = /(.*)(B|b)itch(.*)/; botRegexSt = /(.*)(S|s)treak(.*)/; botRegexCo = /(.*)(C|c)ost(.*)/;
+  botRegexBi = /(.*)(B|b)itch(.*)/; botRegexSt = /\/(S|s)treak(.*)/; botRegexCo = /\/(C|c)ost(.*)/;
   
   var phraseArray = ["#?",
                     "#wtf",
