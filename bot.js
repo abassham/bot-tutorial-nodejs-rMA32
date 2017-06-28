@@ -7,8 +7,7 @@ function respond() {
 
   botRegex = /(\s|^)(B|b)ot(\s|$)/;  botRegexFi = /\/5$/;botRegexBa = /\/(B|b)asic(.*)/
   botRegexAr = /\/(A|a)rena(.*)/;botRegexPr = /\/(P|p)restige(.*)/; botRegexCa = /\/(C|c)alc(.*)/;botRegexLa = /\/(L|l)ol(.*)/;
-  botRegex6 = /\/(M|m)ap6$/;botRegex61 = /\/(M|m)ap6[.]1$/;botRegex62 = /\/(M|m)ap6[.]2$/;botRegex63 = /\/(M|m)ap6[.]3$/;
-  botRegexDo = /\/(D|d)onations/;botRegexLe = /\/(L|l)egend$/;botRegexLi = /\/(L|l)ist$/;
+  botRegex6 = /\/(M|m)ap6$/; botRegexDo = /\/(D|d)onations/;botRegexLe = /\/(L|l)egend$/;botRegexLi = /\/(L|l)ist$/;
   botRegexHg = /Graves/;botRegexFf = /(.*)(B|b)(R|r)(A|a|U|u)(H|h)(.*)/;botRegexBk = /(.*)(B|b)oss kill(.*)/;
   botRegexBi = /(.*)(B|b)itch(.*)/; botRegexSt = /\/(S|s)treak(.*)/; botRegexCo = /\/(C|c)ost(.*)/;
   
@@ -46,7 +45,7 @@ function respond() {
   }
   else if(request.text && botRegexLi.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("#comingsoon");
+    postMessage("https://dl.dropboxusercontent.com/s/bywnufi2rzh87q3/Photo%20Jun%2028%2C%2012%2009%2002%20PM.jpg");
     this.res.end();
   } 
   else if(request.text && botRegexBi.test(request.text)) {
@@ -76,7 +75,7 @@ function respond() {
   }
   else if(request.text && botRegexCo.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://drive.google.com/open?id=0B20CcFiEk3ngX1E5bnFWYmlLM1k");
+    postMessage("https://dl.dropboxusercontent.com/s/uk6dl2m5rme32nd/Photo%20Jun%2028%2C%2011%2048%2040%20AM.jpg");
     this.res.end();
   }
   else if(request.text && botRegexHg.test(request.text)) {
@@ -97,23 +96,9 @@ function respond() {
   }
   else if(request.text && botRegex6.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://marvelbitvachempionov.ru/wp-content/uploads/maps/aqmap6en.jpg");
-    postMessage("https://docs.google.com/spreadsheets/d/1qi-3KOfLnI0c4YL4b9CB85e1OXw4HmtaVaCbbUR4aOs/htmlview");
-    this.res.end();
-  }
-  else if(request.text && botRegex61.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("http://marvelbitvachempionov.ru/wp-content/uploads/maps/aqmap6-1en.jpg");
-    this.res.end();
-  }
-  else if(request.text && botRegex62.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("http://marvelbitvachempionov.ru/wp-content/uploads/maps/aqmap6-2en.jpg");
-    this.res.end();
-  }
-  else if(request.text && botRegex63.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("http://marvelbitvachempionov.ru/wp-content/uploads/maps/aqmap6-3en.jpg");
+    postMessage("https://dl.dropboxusercontent.com/s/krj1s7rd2fx04ax/Photo%20Jun%2028%2C%2011%2052%2028%20AM.jpg");
+    postMessage("https://dl.dropboxusercontent.com/s/rd3mhvv37i9c4n3/Photo%20Jun%2028%2C%2011%2052%2030%20AM.jpg");
+    postMessage("https://dl.dropboxusercontent.com/s/pwaa3bwsj7odlpd/Photo%20Jun%2028%2C%2011%2052%2032%20AM.jpg");
     this.res.end();
   }
   else if(request.text && botRegexLe.test(request.text)) {
@@ -128,7 +113,7 @@ function respond() {
   }
   else if(request.text && botRegexBa.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://drive.google.com/open?id=0B20CcFiEk3ngWXRDTlU2RHRjenM");
+    postMessage("https://dl.dropboxusercontent.com/s/8w5bcib9wdeqgo1/Photo%20Jun%2028%2C%2011%2048%2054%20AM.jpg");
     this.res.end();
   }
   else if(request.text && botRegexBk.test(request.text)) {
