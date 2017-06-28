@@ -45,7 +45,7 @@ function respond() {
   }
   else if(request.text && botRegexLi.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://dl.dropboxusercontent.com/s/bywnufi2rzh87q3/Photo%20Jun%2028%2C%2012%2009%2002%20PM.jpg");
+    postMessage("https://dl.dropboxusercontent.com/s/osgdqoayj2yya2z/Photo%20Jun%2028%2C%2011%2050%2042%20AM.jpg");
     this.res.end();
   } 
   else if(request.text && botRegexBi.test(request.text)) {
