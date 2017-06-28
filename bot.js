@@ -6,8 +6,8 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
 
   botRegex = /(\s|^)(B|b)ot(\s|$)/;  botRegexFi = /\/5$/;botRegexBa = /\/(B|b)asic(.*)/
-  botRegexAr = /\/(A|a)rena(.*)/;botRegexPr = /\/(P|p)restige(.*)/; botRegexCa = /\/(C|c)alc(.*)/;botRegexLa = /\/(L|l)ol(.*)/;
-  botRegex6 = /\/(M|m)ap6$/; botRegexDo = /\/(D|d)onations/;botRegexLe = /\/(L|l)egend$/;botRegexLi = /\/(L|l)ist$/;
+  botRegexAr = /\/(A|a)rena(.*)/;botRegexPr = /\/(P|p)restige(.*)/; botRegexCa = /\/(C|c)alc(.*)/;botRegexLa = /\/(L|l)ol$/;
+  botRegexLt = /\/(L|l)olteam$/;botRegex6 = /\/(M|m)ap6$/; botRegexDo = /\/(D|d)onations/;botRegexLe = /\/(L|l)egend$/;botRegexLi = /\/(L|l)ist$/;
   botRegexHg = /Graves/;botRegexFf = /(.*)(B|b)(R|r)(A|a|U|u)(H|h)(.*)/;botRegexBk = /(.*)(B|b)oss kill(.*)/;
   botRegexBi = /(.*)(B|b)itch(.*)/; botRegexSt = /\/(S|s)treak(.*)/; botRegexCo = /\/(C|c)ost(.*)/;
   
@@ -45,7 +45,7 @@ function respond() {
   }
   else if(request.text && botRegexLi.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://dl.dropboxusercontent.com/s/osgdqoayj2yya2z/Photo%20Jun%2028%2C%2011%2050%2042%20AM.jpg");
+    postMessage("https://dl.dropboxusercontent.com/s/73aowbf0im8njz4/list.png");
     this.res.end();
   } 
   else if(request.text && botRegexBi.test(request.text)) {
@@ -71,6 +71,13 @@ function respond() {
   else if(request.text && botRegexLa.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://dl.dropboxusercontent.com/s/osgdqoayj2yya2z/Photo%20Jun%2028%2C%2011%2050%2042%20AM.jpg");
+    this.res.end();
+  }
+  else if(request.text && botRegexLt.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://dl.dropboxusercontent.com/s/vvsxopis9mrnch7/4lol.jpg");
+    postMessage("https://dl.dropboxusercontent.com/s/bro25izioecjogm/5lol.jpg");
+    postMessage("https://dl.dropboxusercontent.com/s/5cbdj1qmgwqrv8r/5lolinst.png");
     this.res.end();
   }
   else if(request.text && botRegexCo.test(request.text)) {
