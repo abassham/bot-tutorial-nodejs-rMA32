@@ -70,7 +70,7 @@ function respond() {
   }
   else if(request.text && botRegexLa.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://pbs.twimg.com/media/Cu2PYhIVUAENEZj.jpg");
+    postMessage("https://dl.dropboxusercontent.com/s/uk6dl2m5rme32nd/Photo%20Jun%2028%2C%2011%2048%2040%20AM.jpg");
     this.res.end();
   }
   else if(request.text && botRegexCo.test(request.text)) {
