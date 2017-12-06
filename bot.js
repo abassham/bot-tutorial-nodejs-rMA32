@@ -5,21 +5,18 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
 
-  botRegex = /(\s|^)(B|b)ot(\s|$)/;  botRegexTi = /(.*)(T|t)itan(.*)/;botRegexBi = /(.*)(B|b)itch(.*)/
-  botRegexBk = /(.*)(B|b)oss kill(.*)/;botRegexAr = /(.*)(A|a)rena cutoff(.*)/;botRegexPr = /(.*)(P|p)restige link(.*)/;
-  botRegexFu = /(.*)(F|f)uck (Y|y)ou(.*)/;botRegexHg = /Graves/;botRegexFf = /(.*)(B|b)(R|r)(A|a|U|u)(H|h)(.*)/;
-  botRegexDo = /\/(D|d)onations/;botRegex6 = /\/(M|m)ap6$/;botRegex61 = /\/(M|m)ap6[.]1$/;botRegex62 = /\/(M|m)ap6[.]2$/;
-  botRegex63 = /\/(M|m)ap6[.]3$/;botRegexLe = /\/(L|l)egend$/;botRegexSc = /(\s|^)(S|s)crew (Y|y)ou(\s|$)/;
-
+  botRegex = /(\s|^)(B|b)ot(\s|$)/;  botRegexFi = /\/5$/;botRegexBa = /\/(B|b)asic(.*)/
+  botRegexAr = /\/(A|a)rena(.*)/;botRegexPr = /\/(P|p)restige(.*)/; botRegexCa = /\/(C|c)alc(.*)/;botRegexLa = /\/(L|l)ol$/;
+  botRegexLt = /\/(L|l)olteam$/;botRegex6 = /\/(M|m)ap6$/; botRegexDo = /\/(D|d)onations/;botRegexLe = /\/(L|l)egend$/;botRegexLi = /\/(L|l)ist$/;
+  botRegexHg = /Graves/;botRegexFf = /(.*)(B|b)(R|r)(A|a|U|u)(H|h)(.*)/;botRegexBk = /(.*)(B|b)oss kill(.*)/;
+  botRegexBi = /(.*)(B|b)itch(.*)/; botRegexSt = /\/(S|s)treak(.*)/; botRegexCo = /\/(C|c)ost(.*)/;
+  
   var phraseArray = ["#?",
                     "#wtf",
                     "#saymyname",
-                    "#24msgs",
-                    "#omv",
                     "#legend",
                     "#iamgroot",
-                    "#telomere",
-                     "http://pix.iemoji.com/images/emoji/apple/ios-9/256/lion-face.png",
+                    "http://pix.iemoji.com/images/emoji/apple/ios-9/256/lion-face.png",
                     "#here"];
   var phrase = chooseRandom(phraseArray);
   var phraseArray2 = ["#2fast",
@@ -41,22 +38,21 @@ function respond() {
     postMessage(phrase);
     this.res.end();
   }
-  else if(request.text && botRegexTi.test(request.text)) {
+  else if(request.text && botRegexSt.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("#hebackyet?");
+    postMessage("https://drive.google.com/open?id=0B20CcFiEk3ngUm90b0pIN2xhQ1U");
+    this.res.end();
+  }
+  else if(request.text && botRegexLi.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://dl.dropboxusercontent.com/s/73aowbf0im8njz4/list.png");
     this.res.end();
   } 
-  
   else if(request.text && botRegexBi.test(request.text)) {
     this.res.writeHead(200);
     postMessage("#thatbih");
     this.res.end();
   } 
-  else if(request.text && botRegexBk.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("#bosskillah");
-    this.res.end();
-  }  
   else if(request.text && botRegexAr.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://docs.google.com/spreadsheets/d/1sJtSVnjhhRNxpiuMR5uXrsTlrsXMjp9TNO7JHDXhtsk/htmlview?pli=1");
@@ -66,10 +62,27 @@ function respond() {
     this.res.writeHead(200);
     postMessage("https://docs.google.com/spreadsheets/d/13oEg8HzEB11-il7o4mBDUpPx-s2hnPvRa1PSMgpxyYE/edit?usp=sharing");
     this.res.end();
-  }  
-  else if(request.text && botRegexFu.test(request.text)) {
+  }
+  else if(request.text && botRegexCa.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("#Me?? Fuq you!");
+    postMessage("https://docs.google.com/spreadsheets/d/1yeQ7NbFMmJKWQKH8fLV7tTDdygAB1ECl5ag4LIXnxgM/copy");
+    this.res.end();
+  }
+  else if(request.text && botRegexLa.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://dl.dropboxusercontent.com/s/osgdqoayj2yya2z/Photo%20Jun%2028%2C%2011%2050%2042%20AM.jpg");
+    this.res.end();
+  }
+  else if(request.text && botRegexLt.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://dl.dropboxusercontent.com/s/vvsxopis9mrnch7/4lol.jpg");
+    postMessage("https://dl.dropboxusercontent.com/s/bro25izioecjogm/5lol.jpg");
+    postMessage("https://dl.dropboxusercontent.com/s/5cbdj1qmgwqrv8r/5lolinst.png");
+    this.res.end();
+  }
+  else if(request.text && botRegexCo.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://dl.dropboxusercontent.com/s/uk6dl2m5rme32nd/Photo%20Jun%2028%2C%2011%2048%2040%20AM.jpg");
     this.res.end();
   }
   else if(request.text && botRegexHg.test(request.text)) {
@@ -85,28 +98,14 @@ function respond() {
   } 
   else if(request.text && botRegexDo.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("GO: 170k\nBC: 46k\nLO: 15k");
+    postMessage("GO: 117k\nBC: 26k\nLO: 11k");
     this.res.end();
   }
   else if(request.text && botRegex6.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://marvelbitvachempionov.ru/wp-content/uploads/maps/aqmap6en.jpg");
-    postMessage("https://docs.google.com/spreadsheets/d/1qi-3KOfLnI0c4YL4b9CB85e1OXw4HmtaVaCbbUR4aOs/htmlview");
-    this.res.end();
-  }
-  else if(request.text && botRegex61.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("http://marvelbitvachempionov.ru/wp-content/uploads/maps/aqmap6-1en.jpg");
-    this.res.end();
-  }
-  else if(request.text && botRegex62.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("http://marvelbitvachempionov.ru/wp-content/uploads/maps/aqmap6-2en.jpg");
-    this.res.end();
-  }
-  else if(request.text && botRegex63.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("http://marvelbitvachempionov.ru/wp-content/uploads/maps/aqmap6-3en.jpg");
+    postMessage("https://dl.dropboxusercontent.com/s/krj1s7rd2fx04ax/Photo%20Jun%2028%2C%2011%2052%2028%20AM.jpg");
+    postMessage("https://dl.dropboxusercontent.com/s/rd3mhvv37i9c4n3/Photo%20Jun%2028%2C%2011%2052%2030%20AM.jpg");
+    postMessage("https://dl.dropboxusercontent.com/s/pwaa3bwsj7odlpd/Photo%20Jun%2028%2C%2011%2052%2032%20AM.jpg");
     this.res.end();
   }
   else if(request.text && botRegexLe.test(request.text)) {
@@ -114,9 +113,19 @@ function respond() {
     postMessage("http://community.kabam.com/forums/showthread.php?650203-Hall-of-Legends&p=3307845#post3307845");
     this.res.end();
   }
-  else if(request.text && botRegexSc.test(request.text)) {
+  else if(request.text && botRegexFi.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://s-media-cache-ak0.pinimg.com/564x/cb/91/72/cb9172eba64a409ebc3422a3c22ba6e7.jpg");
+    postMessage("https://drive.google.com/open?id=0B20CcFiEk3ngQlBma2ZWTklhYTQ");
+    this.res.end();
+  }
+  else if(request.text && botRegexBa.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://dl.dropboxusercontent.com/s/8w5bcib9wdeqgo1/Photo%20Jun%2028%2C%2011%2048%2054%20AM.jpg");
+    this.res.end();
+  }
+  else if(request.text && botRegexBk.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("#bosskillah");
     this.res.end();
   }
   else {
@@ -168,6 +177,5 @@ function chooseRandom(myArray) {
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
-
 
 exports.respond = respond;
